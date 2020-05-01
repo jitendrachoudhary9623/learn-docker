@@ -1,0 +1,7 @@
+# in current directory create a file
+touch Dockerfile
+#. is the current directory
+docker build -t <docker-hub-username>/<image-name> .
+
+#to view
+docker images
