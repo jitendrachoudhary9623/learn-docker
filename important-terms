@@ -1,0 +1,27 @@
+Dockerfile
+
+a text file without any extension that contains all the commands to be executed to generate an image.
+FROM
+
+a Dockerfile must begin with a FROM instruction . initializes a new build stage
+sets the base image for subsequent instructions
+RUN
+
+command to create and start containers using the current image
+commits the results so that the resulting committed image will be used for the next step in the Dockerfile.
+WORKDIR
+
+creates (if not exists) and set the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile.
+COPY
+
+copies new files or directories from <src> and adds them to the filesystem of the container at the path <dest>
+EXPOSE
+
+specify the network ports of the container at runtime
+specify the network protocol that the port listens (TCP is the default)
+NOTE: EXPOSE does not actually publish the port -- it functions more as a documentation tool
+CMD
+
+provide defaults for an executing container
+if the defaults do not include an executable, you must specify an ENTRYPOINT
+NOTE: there can be only one CMD instruction in a Dockerfile
